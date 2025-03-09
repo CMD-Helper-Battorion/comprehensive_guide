@@ -82,9 +82,9 @@
     </div>
     <script>
         document.getElementById("batteryCheckButton").addEventListener("click", function(event) {
-            event.preventDefault(); // لمنع القفز إلى الـ anchor
+            event.preventDefault();
             navigator.getBattery().then(function(battery) {
-                let level = battery.level * 100;
+                let level = (battery.level * 100).toFixed(0);
                 let charging = battery.charging ? "قيد الشحن" : "غير مشحونة";
                 document.getElementById("batteryStatus").innerText = `🔋 مستوى البطارية: ${level}% - ${charging}`;
             });
