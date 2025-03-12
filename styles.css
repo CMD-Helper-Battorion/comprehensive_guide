@@ -101,6 +101,18 @@ ul li strong {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ff5733;
+    text-shadow: 2px 2px 5px rgba(255, 87, 51, 0.5);
+}
+
 #report {
     display: flex;
     justify-content: center;
